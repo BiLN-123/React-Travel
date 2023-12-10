@@ -1,0 +1,63 @@
+.trip {
+    margin: 4rem 6rem;
+    color: #2a2a2a;
+    & h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    & p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    &-card {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.datatrip {
+    width: 32%;
+    box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 1rem 0.8rem;
+    &-card {
+        &-image {
+            height: 200px;
+            border-radius: 7px;
+            overflow: hidden;
+            & img {
+                width: 100%;
+                height: 100%;
+                border-radius: 7px;
+                transition: all 0.3s ease-in-out;
+            }
+            :hover {
+                transform: scale(1.3);
+            }
+        }
+        &-title {
+            & h4{
+                text-align: start;
+                padding: .9rem 0 .2rem 0;
+            }
+            & p{
+                text-align: start;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .trip {
+        margin: 0rem 2rem 4rem 2rem;
+        &-card{
+            flex-direction: column;
+        }
+    }
+    .datatrip {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}

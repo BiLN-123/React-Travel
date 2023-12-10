@@ -1,0 +1,82 @@
+.destination {
+    margin: 4rem 6rem;
+    & h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        // margin-bottom: 2rem;
+        text-align: center;
+    }
+    & p {
+        font-size: 1.1rem;
+        text-align: center;
+    }
+    &-blog {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 4.5rem;
+        &-text {
+            width: 45%;
+            text-align: start;
+            font-size: 1.1rem;
+            & h2 {
+                padding-bottom: 1rem;
+            }
+            & p {
+                text-align: start; // sử dụng text-align: start để text bắt đầu từ bên trái
+            }
+        }
+        &-img {
+            position: relative;
+            width: 50%;
+            display: flex;
+            justify-content: space-between; // sử dụng space-between để các ảnh cách nhau đều
+            z-index: -99;
+            & img {
+                width: 49%;
+                height: 350px;
+                object-fit: cover; //sử dụng object-fit: cover để ảnh không bị bể
+                border-radius: 6px;
+                box-shadow: -1 1 62px -18px rgba(0, 0, 0, 0.19);
+            }
+            & img:nth-child(2) {
+                position: absolute;
+                top: -10%;
+                right: 0;
+            }
+        }
+    }
+    &-blog-rolate {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8.8rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .destination {
+        margin: 4rem 2rem;
+        &-blog {
+            flex-direction: column-reverse;
+            margin-top: 2.5rem;
+            &-text {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            &-img {
+                width: 100%;
+                margin: 1.8rem 0;
+                & img {
+                    height: 250px;
+                }
+            }
+        }
+        &-blog-rolate {
+            flex-direction: column-reverse;
+            margin-top: 3rem;
+        }
+    }
+}

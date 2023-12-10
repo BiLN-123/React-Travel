@@ -1,0 +1,12 @@
+@media screen and (max-width: 850px){
+    .nav-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+        height: auto;
+        background-color:#01959a;
+        top: 0;
+        left: 0;
+    }
+}
